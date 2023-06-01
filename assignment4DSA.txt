@@ -1,0 +1,145 @@
+#include <iostream>
+#include<stdli.h>
+#inlclude<string.h>
+
+using namespacestd;
+struct node
+{
+    char name[20];
+    node*next;
+    node*down;
+    int flag;
+};
+class Gll
+{
+char ch[20]; int n.i;
+     node*head=NULL,*temp=NULL,*t1=NULL,*t2=NULL;
+     
+     public:
+        node *creat();
+        void insertb();
+        void insertc();
+        void inserts();
+        void insertss();
+        void displayb();
+};
+node *Gll::create()
+{
+    node*p=new(struct node);
+    p->next=NULL;
+    p->down=NULL;
+    p->flag=0;
+    cout<<"\n enter the name";
+    cin>>p->name;
+    return p;
+}
+
+void Gll::insertb()
+{
+    if(head==NULL)
+    {
+        t1=creat();
+        head=t1;
+    }
+    else
+    {
+        cout<<"\n book exist";
+    }
+}
+
+void Gll::insertc()
+{
+    if(head=NULL)
+    {
+        cout<<"\n there is no book";
+    }
+    else
+    {
+        cout<<"\n how many chapter you want to insert";
+        cin>>n;
+        for(i=0;i<n;i++)
+        {
+            t1=create();
+           if(head->flag==0)
+           {
+               head->down=t1; head->flag=1
+           }
+           else
+           {
+                  temp=head;
+                temp=temp->down;
+                while(temp->next!=NULL)
+                temp=temp->next;
+                temp->next=t1;
+           }
+        }
+    }
+}
+void Gll::inserts()
+{
+    if(head==NULL)
+    {
+        cout<<"\n there is no book";
+    }
+    else
+    {
+        cout<<"\nEnter the name of the chapter on which you want to enter the section";
+        cin>>ch;
+        temp=head;
+        if(temp->flag==0)
+        {
+            cout<<"\n their are no chapters on in book";
+        }
+        else
+        {
+            temp=temp->down;
+              while(temp!=NULL)
+              {
+            if(!strccmp(ch,temp->name))
+            cout<<"\n how many sections you want to enter;
+            cin>>n;
+            for(i=0;i<n;i++)
+                     {
+            t1=create();
+                      if(temp->flag==0)
+                    {
+                        temp->down=t1;
+                      temp->flag=1;cout<<"\n****";
+                      t2=temp->down;
+                     }
+                     else
+                     {
+                         cout<<"\n####";
+                         while(t2->next!=NULL)
+                         {
+                             t2=t2->next;
+                         }
+                         t2->next=t1;
+                     }
+                }
+                break;
+            }
+            temp=temp->next;
+        }
+    }
+}
+}
+void Gll::insertss()
+{
+    if(head==NULL)
+    {
+        cout<<"\n there is no book";
+    }
+    else
+    {
+cout<<"\n Enter the name of chapter on which you want to enter the section";
+           cin>>ch;
+temp=head;
+          if(temp->flag==0)
+          {
+              cout<<"\n there are no chapter in book";
+          }
+          
+    }
+}
+                  
